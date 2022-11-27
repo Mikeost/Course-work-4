@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DataBaseWindow</class>
+ <widget class="QMainWindow" name="DataBaseWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>993</width>
+    <height>463</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>БД &quot;Слідчий відділ МВВС&quot;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="criminalCaseTab">
+       <attribute name="title">
+        <string>Справа</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QTableView" name="criminalCaseTableView">
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="detectiveTab">
+       <attribute name="title">
+        <string>Слідчий</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QTableView" name="detectiveTableView">
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="witnessGroupTab">
+       <attribute name="title">
+        <string>Група свідків</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QTableView" name="witnessGroupTableView">
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="witnessTab">
+       <attribute name="title">
+        <string>Свідок</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <widget class="QTableView" name="witnessTableView">
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="suspectsGroupTab">
+       <attribute name="title">
+        <string>Група підозрюваних</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="0" column="0">
+         <widget class="QTableView" name="suspectsGroupTableView">
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="suspectTab">
+       <attribute name="title">
+        <string>Підозрюваний</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="0" column="0">
+         <widget class="QTableView" name="suspectTableView">
+          <property name="iconSize">
+           <size>
+            <width>300</width>
+            <height>300</height>
+           </size>
+          </property>
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>993</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Таблиця</string>
+    </property>
+    <addaction name="actionAddRecord"/>
+    <addaction name="actionEditRecord"/>
+    <addaction name="actionRemoveRecord"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionAddRecord"/>
+   <addaction name="actionEditRecord"/>
+   <addaction name="actionRemoveRecord"/>
+  </widget>
+  <action name="actionAddRecord">
+   <property name="icon">
+    <iconset resource="media.qrc">
+     <normaloff>:/icons/icons/addRecord.png</normaloff>:/icons/icons/addRecord.png</iconset>
+   </property>
+   <property name="text">
+    <string>addRecord</string>
+   </property>
+  </action>
+  <action name="actionEditRecord">
+   <property name="icon">
+    <iconset resource="media.qrc">
+     <normaloff>:/icons/icons/editRecord.png</normaloff>:/icons/icons/editRecord.png</iconset>
+   </property>
+   <property name="text">
+    <string>editRecord</string>
+   </property>
+  </action>
+  <action name="actionRemoveRecord">
+   <property name="icon">
+    <iconset resource="media.qrc">
+     <normaloff>:/icons/icons/removeRecord.png</normaloff>:/icons/icons/removeRecord.png</iconset>
+   </property>
+   <property name="text">
+    <string>removeRecord</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="media.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icons/addRecord.png</file>
+        <file>icons/editRecord.png</file>
+        <file>icons/removeRecord.png</file>
+    </qresource>
+</RCC>
