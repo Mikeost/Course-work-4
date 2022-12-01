@@ -17,6 +17,7 @@ public:
 
 private slots:
     void add();
+
     void edit();
 
     void on_underInvestigationCheckBox_clicked(bool checked);
@@ -28,6 +29,9 @@ private slots:
 private:
     Ui::CriminalCaseRecordWindow *ui;
     QString operation;
+
+signals:
+    void signal();
 };
 
 #endif // CRIMINALCASERECORDWINDOW_H

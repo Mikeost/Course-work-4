@@ -109,7 +109,7 @@ void CriminalCaseRecordWindow::on_savePushButton_clicked()
             queryAdd += "NULL, '";
         }
         else{
-            queryAdd += ui->closeDateEdit->text() + "', '";
+            queryAdd += "'" + ui->closeDateEdit->text() + "', '";
         }
         queryAdd += ui->countVolumeSpinBox->text() + "', '";
 
@@ -121,6 +121,8 @@ void CriminalCaseRecordWindow::on_savePushButton_clicked()
         queryAdd += tableView->model()->index(ui->employeeNumberComboBox->currentIndex(), 0).data().toString() + "')";
 
         queryModel->setQuery(queryAdd);
+
+        emit signal();
 
         this->close();
     }

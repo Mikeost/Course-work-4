@@ -1,6 +1,5 @@
 #include "databasewindow.h"
 #include "ui_databasewindow.h"
-#include "criminalcaserecordwindow.h"
 #include <QMessageBox>
 
 DataBaseWindow::DataBaseWindow(QWidget *parent) :
@@ -8,6 +7,7 @@ DataBaseWindow::DataBaseWindow(QWidget *parent) :
     ui(new Ui::DataBaseWindow)
 {
     ui->setupUi(this);
+
 
     dataBaseInit();
 }
@@ -81,8 +81,9 @@ void DataBaseWindow::on_actionAddRecord_triggered()
 }
 
 void DataBaseWindow::addCriminalRecord(){
-    CriminalCaseRecordWindow *window = new CriminalCaseRecordWindow("add");
-    window->show();
+    ccrW = new CriminalCaseRecordWindow("add");
+    connect(ccrW, &CriminalCaseRecordWindow::signal, this, &DataBaseWindow::on_actionreloadDataBase_triggered);
+    ccrW->show();
 }
 
 DataBaseWindow::~DataBaseWindow()

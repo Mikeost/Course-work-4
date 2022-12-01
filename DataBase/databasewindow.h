@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QSqlDatabase>
 #include <QSqlTableModel>
+#include "criminalcaserecordwindow.h"
 
 namespace Ui {
 class DataBaseWindow;
@@ -17,6 +18,8 @@ public:
     explicit DataBaseWindow(QWidget *parent = nullptr);
     ~DataBaseWindow();
 
+public slots:
+    void on_actionreloadDataBase_triggered();
 
 private slots:
     void dataBaseInit();
@@ -24,8 +27,6 @@ private slots:
     void addCriminalRecord();
 
     void on_actionAddRecord_triggered();
-
-    void on_actionreloadDataBase_triggered();
 
     void on_actionRemoveRecord_triggered();
 
@@ -53,6 +54,8 @@ private:
     QSqlTableModel *suspectTableModel = new QSqlTableModel();
 
     int currentRow;
+
+    CriminalCaseRecordWindow *ccrW;
 };
 
 #endif // DATABASEWINDOW_H
