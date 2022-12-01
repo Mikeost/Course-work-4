@@ -15,6 +15,9 @@ public:
     explicit CriminalCaseRecordWindow(QString operation, QWidget *parent = nullptr);
     ~CriminalCaseRecordWindow();
 
+public slots:
+    void idxInit(int);
+
 private slots:
     void add();
 
@@ -29,6 +32,7 @@ private slots:
 private:
     Ui::CriminalCaseRecordWindow *ui;
     QString operation;
+    int idx;
 
 signals:
     void signal();

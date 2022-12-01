@@ -26,6 +26,8 @@ private slots:
 
     void addCriminalRecord();
 
+    void editCriminalRecord();
+
     void on_actionAddRecord_triggered();
 
     void on_actionRemoveRecord_triggered();
@@ -42,6 +44,8 @@ private slots:
 
     void on_suspectTableView_clicked(const QModelIndex &index);
 
+    void on_actionEditRecord_triggered();
+
 private:
     Ui::DataBaseWindow *ui;
 
@@ -56,6 +60,9 @@ private:
     int currentRow;
 
     CriminalCaseRecordWindow *ccrW;
+
+signals:
+    void signal(int);
 };
 
 #endif // DATABASEWINDOW_H

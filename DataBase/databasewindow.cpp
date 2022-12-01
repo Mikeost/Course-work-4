@@ -1,6 +1,8 @@
 #include "databasewindow.h"
 #include "ui_databasewindow.h"
 #include <QMessageBox>
+#include <QInputDialog>
+#include <QLineEdit>
 
 DataBaseWindow::DataBaseWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -102,11 +104,23 @@ void DataBaseWindow::addCriminalRecord(){
     ccrW->show();
 }
 
-DataBaseWindow::~DataBaseWindow()
-{
-    delete ui;
-}
+void DataBaseWindow::editCriminalRecord(){
+    bool ok;
+    currentRow = QInputDialog::getInt(this, tr("Вибір запису для редагування"),
+                                            tr("Введіть номер запису для редагування:"),
+                                            currentRow + 1, 1, ui->criminalCaseTableView->model()->rowCount(), 1, &ok);
 
+    if(ok){
+        --currentRow;
+
+        ccrW = new CriminalCaseRecordWindow("edit");
+        connect(this, &DataBaseWindow::signal, ccrW, &CriminalCaseRecordWindow::idxInit);
+        ccrW->show();
+        emit signal(currentRow);
+
+        connect(ccrW, &CriminalCaseRecordWindow::signal, this, &DataBaseWindow::on_actionreloadDataBase_triggered);
+    }
+}
 
 void DataBaseWindow::on_actionreloadDataBase_triggered()
 {
@@ -221,3 +235,19 @@ void DataBaseWindow::on_suspectTableView_clicked(const QModelIndex &index)
     currentRow = index.row();
 }
 
+
+void DataBaseWindow::on_actionEditRecord_triggered()
+{
+    switch(ui->tabWidget->currentIndex()){
+    case 0:
+        editCriminalRecord();
+        break;
+    default:
+        break;
+    }
+}
+
+DataBaseWindow::~DataBaseWindow()
+{
+    delete ui;
+}
