@@ -77,6 +77,22 @@ void DataBaseWindow::on_actionAddRecord_triggered()
     switch(ui->tabWidget->currentIndex()){
     case 0:
         addCriminalRecord();
+        break;
+    case 1:
+        detectiveTableModel->insertRow(detectiveTableModel->rowCount());
+        break;
+    case 2:
+        witnessGroupTableModel->insertRow(witnessGroupTableModel->rowCount());
+        break;
+    case 3:
+        witnessTableModel->insertRow(witnessTableModel->rowCount());
+        break;
+    case 4:
+        suspectsGroupTableModel->insertRow(suspectsGroupTableModel->rowCount());
+        break;
+    case 5:
+        suspectTableModel->insertRow(suspectTableModel->rowCount());
+        break;
     }
 }
 
@@ -129,7 +145,7 @@ void DataBaseWindow::on_actionreloadDataBase_triggered()
 void DataBaseWindow::on_actionRemoveRecord_triggered()
 {
     QMessageBox::StandardButton reply;
-    reply = QMessageBox::question(this, "Видалення", "Ви дійсно хочете видалити запис?", QMessageBox::Yes | QMessageBox::No);
+    reply = QMessageBox::question(this, "Видалення", "Ви дійсно хочете видалити запис №" + QString::number(currentRow + 1) + "?", QMessageBox::Yes | QMessageBox::No);
 
     if (reply == QMessageBox::Yes) {
         switch(ui->tabWidget->currentIndex()){
