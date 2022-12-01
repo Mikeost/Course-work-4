@@ -1,5 +1,6 @@
 #include "databasewindow.h"
 #include "ui_databasewindow.h"
+#include "criminalcaserecordwindow.h"
 #include <QMessageBox>
 
 DataBaseWindow::DataBaseWindow(QWidget *parent) :
@@ -71,7 +72,135 @@ void DataBaseWindow::dataBaseInit(){
     }
 }
 
+void DataBaseWindow::on_actionAddRecord_triggered()
+{
+    switch(ui->tabWidget->currentIndex()){
+    case 0:
+        addCriminalRecord();
+    }
+}
+
+void DataBaseWindow::addCriminalRecord(){
+    CriminalCaseRecordWindow *window = new CriminalCaseRecordWindow("add");
+    window->show();
+}
+
 DataBaseWindow::~DataBaseWindow()
 {
     delete ui;
 }
+
+
+void DataBaseWindow::on_actionreloadDataBase_triggered()
+{
+    // Таблиця "Справа"
+    criminalCaseTableModel->select();
+    ui->criminalCaseTableView->setModel(criminalCaseTableModel);
+    ui->criminalCaseTableView->resizeColumnsToContents();
+
+    // Таблиця "Слідчий"
+    detectiveTableModel->select();
+    ui->detectiveTableView->setModel(detectiveTableModel);
+    ui->detectiveTableView->resizeColumnsToContents();
+
+    // Таблиця "Група свідків"
+    witnessGroupTableModel->select();
+    ui->witnessGroupTableView->setModel(witnessGroupTableModel);
+    ui->witnessGroupTableView->resizeColumnsToContents();
+
+    // Таблиця "Свідок"
+    witnessTableModel->select();
+    ui->witnessTableView->setModel(witnessTableModel);
+    ui->witnessTableView->resizeColumnsToContents();
+
+    // Таблиця "Група підозрюваних"
+    suspectsGroupTableModel->select();
+    ui->suspectsGroupTableView->setModel(suspectsGroupTableModel);
+    ui->suspectsGroupTableView->resizeColumnsToContents();
+
+    // Таблиця "Підозрюваний"
+    suspectTableModel->select();
+    ui->suspectTableView->setModel(suspectTableModel);
+    ui->suspectTableView->resizeColumnsToContents();
+}
+
+
+void DataBaseWindow::on_actionRemoveRecord_triggered()
+{
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::question(this, "Видалення", "Ви дійсно хочете видалити запис?", QMessageBox::Yes | QMessageBox::No);
+
+    if (reply == QMessageBox::Yes) {
+        switch(ui->tabWidget->currentIndex()){
+            case 0:
+                criminalCaseTableModel->removeRow(currentRow);
+                criminalCaseTableModel->select();
+                on_actionreloadDataBase_triggered();
+                break;
+            case 1:
+                detectiveTableModel->removeRow(currentRow);
+                detectiveTableModel->select();
+                on_actionreloadDataBase_triggered();
+                break;
+            case 2:
+                witnessGroupTableModel->removeRow(currentRow);
+                witnessGroupTableModel->select();
+                on_actionreloadDataBase_triggered();
+                break;
+            case 3:
+                witnessTableModel->removeRow(currentRow);
+                witnessTableModel->select();
+                on_actionreloadDataBase_triggered();
+                break;
+            case 4:
+                suspectsGroupTableModel->removeRow(currentRow);
+                suspectsGroupTableModel->select();
+                on_actionreloadDataBase_triggered();
+                break;
+            case 5:
+                suspectTableModel->removeRow(currentRow);
+                suspectTableModel->select();
+                on_actionreloadDataBase_triggered();
+                break;
+            default:
+                break;
+            }
+    }
+}
+
+
+void DataBaseWindow::on_criminalCaseTableView_clicked(const QModelIndex &index)
+{
+    currentRow = index.row();
+}
+
+
+void DataBaseWindow::on_detectiveTableView_clicked(const QModelIndex &index)
+{
+    currentRow = index.row();
+}
+
+
+void DataBaseWindow::on_witnessGroupTableView_clicked(const QModelIndex &index)
+{
+    currentRow = index.row();
+}
+
+
+void DataBaseWindow::on_witnessTableView_clicked(const QModelIndex &index)
+{
+    currentRow = index.row();
+}
+
+
+void DataBaseWindow::on_suspectsGroupTableView_clicked(const QModelIndex &index)
+{
+    currentRow = index.row();
+}
+
+
+void DataBaseWindow::on_suspectTableView_clicked(const QModelIndex &index)
+{
+    currentRow = index.row();
+}
+

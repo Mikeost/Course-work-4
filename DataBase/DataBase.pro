@@ -9,16 +9,19 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    criminalcaserecordwindow.cpp \
     databasewindow.cpp \
     main.cpp \
     authorizationwindow.cpp
 
 HEADERS += \
     authorizationwindow.h \
+    criminalcaserecordwindow.h \
     databasewindow.h
 
 FORMS += \
     authorizationwindow.ui \
+    criminalcaserecordwindow.ui \
     databasewindow.ui
 
 # Default rules for deployment.
@@ -28,3 +31,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     media.qrc
+
+ICON = $$PWD/icons/appIcon.icns

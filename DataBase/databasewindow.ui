@@ -130,6 +130,7 @@
     <addaction name="actionAddRecord"/>
     <addaction name="actionEditRecord"/>
     <addaction name="actionRemoveRecord"/>
+    <addaction name="actionreloadDataBase"/>
    </widget>
    <addaction name="menu"/>
   </widget>
@@ -147,6 +148,7 @@
    <addaction name="actionAddRecord"/>
    <addaction name="actionEditRecord"/>
    <addaction name="actionRemoveRecord"/>
+   <addaction name="actionreloadDataBase"/>
   </widget>
   <action name="actionAddRecord">
    <property name="icon">
@@ -154,7 +156,10 @@
      <normaloff>:/icons/icons/addRecord.png</normaloff>:/icons/icons/addRecord.png</iconset>
    </property>
    <property name="text">
-    <string>addRecord</string>
+    <string>Додати запис</string>
+   </property>
+   <property name="toolTip">
+    <string>Додати запис</string>
    </property>
   </action>
   <action name="actionEditRecord">
@@ -163,7 +168,10 @@
      <normaloff>:/icons/icons/editRecord.png</normaloff>:/icons/icons/editRecord.png</iconset>
    </property>
    <property name="text">
-    <string>editRecord</string>
+    <string>Редагувати запис</string>
+   </property>
+   <property name="toolTip">
+    <string>Редагувати запис</string>
    </property>
   </action>
   <action name="actionRemoveRecord">
@@ -172,7 +180,22 @@
      <normaloff>:/icons/icons/removeRecord.png</normaloff>:/icons/icons/removeRecord.png</iconset>
    </property>
    <property name="text">
-    <string>removeRecord</string>
+    <string>Видалити запис</string>
+   </property>
+   <property name="toolTip">
+    <string>Видалити запис</string>
+   </property>
+  </action>
+  <action name="actionreloadDataBase">
+   <property name="icon">
+    <iconset resource="media.qrc">
+     <normaloff>:/icons/icons/reloadDatabase.png</normaloff>:/icons/icons/reloadDatabase.png</iconset>
+   </property>
+   <property name="text">
+    <string>Оновити БД</string>
+   </property>
+   <property name="toolTip">
+    <string>Оновити БД</string>
    </property>
   </action>
  </widget>

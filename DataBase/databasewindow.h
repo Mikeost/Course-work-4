@@ -17,7 +17,29 @@ public:
     explicit DataBaseWindow(QWidget *parent = nullptr);
     ~DataBaseWindow();
 
+
+private slots:
     void dataBaseInit();
+
+    void addCriminalRecord();
+
+    void on_actionAddRecord_triggered();
+
+    void on_actionreloadDataBase_triggered();
+
+    void on_actionRemoveRecord_triggered();
+
+    void on_criminalCaseTableView_clicked(const QModelIndex &index);
+
+    void on_detectiveTableView_clicked(const QModelIndex &index);
+
+    void on_witnessGroupTableView_clicked(const QModelIndex &index);
+
+    void on_witnessTableView_clicked(const QModelIndex &index);
+
+    void on_suspectsGroupTableView_clicked(const QModelIndex &index);
+
+    void on_suspectTableView_clicked(const QModelIndex &index);
 
 private:
     Ui::DataBaseWindow *ui;
@@ -29,6 +51,8 @@ private:
     QSqlTableModel *witnessTableModel = new QSqlTableModel();
     QSqlTableModel *suspectsGroupTableModel = new QSqlTableModel();
     QSqlTableModel *suspectTableModel = new QSqlTableModel();
+
+    int currentRow;
 };
 
 #endif // DATABASEWINDOW_H

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CriminalCaseRecordWindow</class>
+ <widget class="QDialog" name="CriminalCaseRecordWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>460</width>
+    <height>573</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>14</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="11" column="0">
+    <widget class="QLabel" name="dateCloseLabel">
+     <property name="text">
+      <string>Дата закриття:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="nameLabel">
+     <property name="text">
+      <string>Найменування:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="reasonLabel">
+     <property name="text">
+      <string>Підстава:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="16" column="0" colspan="2">
+    <widget class="QLabel" name="employeeNumberLabel">
+     <property name="text">
+      <string>Табельний номер слідчого:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0" colspan="2">
+    <widget class="QPlainTextEdit" name="reasonPlainTextEdit"/>
+   </item>
+   <item row="9" column="0">
+    <widget class="QLabel" name="dateCreateLabel">
+     <property name="text">
+      <string>Дата відкриття:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0" colspan="2">
+    <widget class="QDateEdit" name="createDateEdit">
+     <property name="displayFormat">
+      <string>yyyy-MM-dd</string>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="0">
+    <widget class="QLabel" name="countVolumeLabel">
+     <property name="text">
+      <string>Кількість томів:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="18" column="0">
+    <widget class="QPushButton" name="cancelPushButton">
+     <property name="text">
+      <string>Скасувати</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <widget class="QLineEdit" name="nameLineEdit"/>
+   </item>
+   <item row="13" column="0" colspan="2">
+    <widget class="QCheckBox" name="underInvestigationCheckBox">
+     <property name="text">
+      <string>Справа розслідується</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="criminalCaseLabel">
+     <property name="font">
+      <font>
+       <pointsize>19</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Додання нового запису в таблицю &quot;Справа&quot;</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QLineEdit" name="numberLineEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="typeLabel">
+     <property name="text">
+      <string>Тип справи:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="18" column="1">
+    <widget class="QPushButton" name="savePushButton">
+     <property name="text">
+      <string>Зберегти</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="numberLabel">
+     <property name="text">
+      <string>Номер справи:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="0" colspan="2">
+    <widget class="QDateEdit" name="closeDateEdit">
+     <property name="displayFormat">
+      <string>yyyy-MM-dd</string>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="0">
+    <widget class="QSpinBox" name="countVolumeSpinBox">
+     <property name="accelerated">
+      <bool>false</bool>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+    </widget>
+   </item>
+   <item row="17" column="0" colspan="2">
+    <widget class="QComboBox" name="employeeNumberComboBox"/>
+   </item>
+   <item row="6" column="0" colspan="2">
+    <widget class="QComboBox" name="typeComboBox">
+     <item>
+      <property name="text">
+       <string>Кримінальна справа</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Цивільна справа</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Адміністративна справа</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
