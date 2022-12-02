@@ -600,3 +600,27 @@ void DataBaseWindow::on_actionFourthQuery_triggered()
     ui->fourthQueryTableView->setModel(queryModel);
     ui->fourthQueryTableView->resizeColumnsToContents();
 }
+
+void DataBaseWindow::on_actionQueries_triggered()
+{
+    QStringList queries = { "Інформація про кількість томів кожного типу справи",
+                            "Інформація про справи за заданим періодом",
+                            "Інформація про свідків, які задіяні в заданій справі",
+                            "Інформація про підозрюваних, які задіяні в заданій справі"
+                          };
+    QString query = QInputDialog::getItem(this, "Запит", "Оберіть запит:", queries, 0, QInputDialog::UseListViewForComboBoxItems);
+
+    if(query == queries.at(0)){
+        on_actionFirstQuery_triggered();
+    }
+    else if(query == queries.at(1)){
+        on_actionSecondQuery_triggered();
+    }
+    else if(query == queries.at(2)){
+        on_actionThirdQuery_triggered();
+    }
+    else if(query == queries.at(3)){
+        on_actionFourthQuery_triggered();
+    }
+}
+

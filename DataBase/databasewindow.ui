@@ -507,6 +507,8 @@
    <addaction name="actionreloadDataBase"/>
    <addaction name="separator"/>
    <addaction name="searchAction"/>
+   <addaction name="separator"/>
+   <addaction name="actionQueries"/>
   </widget>
   <action name="actionAddRecord">
    <property name="icon">
@@ -598,6 +600,18 @@
   <action name="actionFourthQuery">
    <property name="text">
     <string>Інформація про підозрюваних, які задіяні в заданій справі</string>
+   </property>
+  </action>
+  <action name="actionQueries">
+   <property name="icon">
+    <iconset resource="media.qrc">
+     <normaloff>:/icons/icons/queries.png</normaloff>:/icons/icons/queries.png</iconset>
+   </property>
+   <property name="text">
+    <string>Запити</string>
+   </property>
+   <property name="toolTip">
+    <string>Запити</string>
    </property>
   </action>
  </widget>

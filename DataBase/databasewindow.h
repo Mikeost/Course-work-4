@@ -68,6 +68,8 @@ private slots:
 
     void on_actionFourthQuery_triggered();
 
+    void on_actionQueries_triggered();
+
 private:
     Ui::DataBaseWindow *ui;
 
