@@ -46,6 +46,8 @@ private slots:
 
     void on_actionEditRecord_triggered();
 
+    void on_searchAction_triggered();
+
 private:
     Ui::DataBaseWindow *ui;
 

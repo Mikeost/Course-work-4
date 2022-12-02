@@ -251,3 +251,95 @@ DataBaseWindow::~DataBaseWindow()
 {
     delete ui;
 }
+
+void DataBaseWindow::on_searchAction_triggered()
+{
+    QString inputTask;
+    bool isFind = false;
+    switch(ui->tabWidget->currentIndex()){
+        case 0:
+             inputTask = QInputDialog::getText(this, tr("Пошук за ключовим полем"),
+                                                            tr("Введіть номер справи:"), QLineEdit::Normal);
+            for (int var = 0; var < ui->criminalCaseTableView->model()->rowCount(); ++var) {
+                        if(ui->criminalCaseTableView->model()->index(var, 0).data() == inputTask){
+                            ui->criminalCaseTableView->selectRow(var);
+                            ui->criminalCaseTableView->setFocus();
+                            return;
+                        }
+            }
+            QMessageBox::information(0, "Повідомлення", "Данного номеру справи немає!");
+            break;
+
+        case 1:
+            inputTask = QInputDialog::getText(this, tr("Пошук за ключовим полем"),
+                                                            tr("Введіть табельний номер слідчого:"), QLineEdit::Normal);
+            for (int var = 0; var < ui->detectiveTableView->model()->rowCount(); ++var) {
+                        if(ui->detectiveTableView->model()->index(var, 0).data() == inputTask){
+                            ui->detectiveTableView->selectRow(var);
+                            ui->detectiveTableView->setFocus();
+                            return;
+                        }
+            }
+            QMessageBox::information(0, "Повідомлення", "Данного табельного номеру немає!");
+            break;
+
+        case 2:
+            inputTask = QInputDialog::getText(this, tr("Пошук за ключовим полем"),
+                                                            tr("Введіть код групи свідків:"), QLineEdit::Normal);
+            ui->witnessGroupTableView->clearSelection();
+            for (int var = 0; var < ui->witnessGroupTableView->model()->rowCount(); ++var) {
+                        if(ui->witnessGroupTableView->model()->index(var, 0).data() == inputTask){
+                            ui->witnessGroupTableView->selectRow(var);
+                            ui->witnessGroupTableView->setFocus();
+                            isFind = true;
+                        }
+            }
+            if(!isFind){
+                QMessageBox::information(0, "Повідомлення", "Данного коду групи свідків немає!");
+            }
+            break;
+
+        case 3:
+            inputTask = QInputDialog::getText(this, tr("Пошук за ключовим полем"),
+                                                            tr("Введіть код свідка:"), QLineEdit::Normal);
+            for (int var = 0; var < ui->witnessTableView->model()->rowCount(); ++var) {
+                        if(ui->witnessTableView->model()->index(var, 0).data() == inputTask){
+                            ui->witnessTableView->selectRow(var);
+                            ui->witnessTableView->setFocus();
+                            return;
+                        }
+            }
+            QMessageBox::information(0, "Повідомлення", "Данного коду свідка немає!");
+            break;
+
+        case 4:
+            inputTask = QInputDialog::getText(this, tr("Пошук за ключовим полем"),
+                                                            tr("Введіть код групи підозрюваних:"), QLineEdit::Normal);
+            ui->suspectsGroupTableView->clearSelection();
+            for (int var = 0; var < ui->suspectsGroupTableView->model()->rowCount(); ++var) {
+                        if(ui->suspectsGroupTableView->model()->index(var, 0).data() == inputTask){
+                            ui->suspectsGroupTableView->selectRow(var);
+                            ui->suspectsGroupTableView->setFocus();
+                            isFind = true;
+                        }
+            }
+            if(!isFind){
+                QMessageBox::information(0, "Повідомлення", "Данного коду групи підозрюваних немає!");
+            }
+            break;
+
+        case 5:
+            inputTask = QInputDialog::getText(this, tr("Пошук за ключовим полем"),
+                                                            tr("Введіть код підозрюваного:"), QLineEdit::Normal);
+            for (int var = 0; var < ui->suspectTableView->model()->rowCount(); ++var) {
+                        if(ui->suspectTableView->model()->index(var, 0).data() == inputTask){
+                            ui->suspectTableView->selectRow(var);
+                            ui->suspectTableView->setFocus();
+                            return;
+                        }
+            }
+            QMessageBox::information(0, "Повідомлення", "Данного коду підозрюваного немає!");
+            break;
+        }
+}
+

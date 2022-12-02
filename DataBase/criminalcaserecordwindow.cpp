@@ -201,4 +201,3 @@ void CriminalCaseRecordWindow::on_savePushButton_clicked()
         this->close();
     }
 }
-

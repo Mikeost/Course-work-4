@@ -4,5 +4,6 @@
         <file>icons/editRecord.png</file>
         <file>icons/removeRecord.png</file>
         <file>icons/reloadDatabase.png</file>
+        <file>icons/search.png</file>
     </qresource>
 </RCC>
