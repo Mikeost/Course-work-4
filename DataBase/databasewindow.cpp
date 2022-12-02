@@ -343,3 +343,136 @@ void DataBaseWindow::on_searchAction_triggered()
         }
 }
 
+
+void DataBaseWindow::on_filterTypePushButton_clicked(bool checked)
+{
+    if(checked){
+        ui->filterTypePushButton->setText("Скасувати");
+        QSqlQueryModel* queryModel = new QSqlQueryModel();
+        queryModel->setQuery("SELECT * "
+                             "FROM `Справа` "
+                             "WHERE `Тип справи` = '" + ui->filterTypeComboBox->currentText() + "'");
+        ui->criminalCaseTableView->setModel(queryModel);
+        ui->criminalCaseTableView->resizeColumnsToContents();
+    }
+    else{
+        ui->filterTypePushButton->setText("Фільтрувати");
+        on_actionreloadDataBase_triggered();
+    }
+}
+
+
+void DataBaseWindow::on_filterRankPushButton_clicked(bool checked)
+{
+    if(checked){
+        if(ui->filterRankLineEdit->text().isEmpty()){
+            QMessageBox::information(this, "Помилка!", "Введіть звання!");
+            ui->filterRankLineEdit->setFocus();
+            return;
+        }
+        ui->filterRankPushButton->setText("Скасувати");
+        QSqlQueryModel* queryModel = new QSqlQueryModel();
+        queryModel->setQuery("SELECT * "
+                             "FROM `Слідчий` "
+                             "WHERE `Звання` = '" + ui->filterRankLineEdit->text() + "'");
+        ui->detectiveTableView->setModel(queryModel);
+        ui->detectiveTableView->resizeColumnsToContents();
+    }
+    else{
+        ui->filterRankPushButton->setText("Фільтрувати");
+        on_actionreloadDataBase_triggered();
+    }
+}
+
+
+void DataBaseWindow::on_filterWitnessGroupCodePushButton_clicked(bool checked)
+{
+    if(checked){
+        if(ui->filterWitnessGroupCodeLineEdit->text().isEmpty()){
+            QMessageBox::information(this, "Помилка!", "Введіть код групи!");
+            ui->filterWitnessGroupCodeLineEdit->setFocus();
+            return;
+        }
+        ui->filterWitnessGroupCodePushButton->setText("Скасувати");
+        QSqlQueryModel* queryModel = new QSqlQueryModel();
+        queryModel->setQuery("SELECT * "
+                             "FROM `Група свідків` "
+                             "WHERE `Код групи` = '" + ui->filterWitnessGroupCodeLineEdit->text() + "'");
+        ui->witnessGroupTableView->setModel(queryModel);
+        ui->witnessGroupTableView->resizeColumnsToContents();
+    }
+    else{
+        ui->filterWitnessGroupCodePushButton->setText("Фільтрувати");
+        on_actionreloadDataBase_triggered();
+    }
+}
+
+
+void DataBaseWindow::on_filterWitnessSurnamePushButton_clicked(bool checked)
+{
+    if(checked){
+        if(ui->filterWitnessSurnameLineEdit->text().isEmpty()){
+            QMessageBox::information(this, "Помилка!", "Введіть прізвище!");
+            ui->filterWitnessSurnameLineEdit->setFocus();
+            return;
+        }
+        ui->filterWitnessSurnamePushButton->setText("Скасувати");
+        QSqlQueryModel* queryModel = new QSqlQueryModel();
+        queryModel->setQuery("SELECT * "
+                             "FROM `Свідок` "
+                             "WHERE `Прізвище` = '" + ui->filterWitnessSurnameLineEdit->text() + "'");
+        ui->witnessTableView->setModel(queryModel);
+        ui->witnessTableView->resizeColumnsToContents();
+    }
+    else{
+        ui->filterWitnessSurnamePushButton->setText("Фільтрувати");
+        on_actionreloadDataBase_triggered();
+    }
+}
+
+
+void DataBaseWindow::on_filterSuspectsGroupCodePushButton_clicked(bool checked)
+{
+    if(checked){
+        if(ui->filterSuspectsGroupCodeLineEdit->text().isEmpty()){
+            QMessageBox::information(this, "Помилка!", "Введіть код групи!");
+            ui->filterSuspectsGroupCodeLineEdit->setFocus();
+            return;
+        }
+        ui->filterSuspectsGroupCodePushButton->setText("Скасувати");
+        QSqlQueryModel* queryModel = new QSqlQueryModel();
+        queryModel->setQuery("SELECT * "
+                             "FROM `Група підозрюваних` "
+                             "WHERE `Код групи` = '" + ui->filterSuspectsGroupCodeLineEdit->text() + "'");
+        ui->suspectsGroupTableView->setModel(queryModel);
+        ui->suspectsGroupTableView->resizeColumnsToContents();
+    }
+    else{
+        ui->filterSuspectsGroupCodePushButton->setText("Фільтрувати");
+        on_actionreloadDataBase_triggered();
+    }
+}
+
+
+void DataBaseWindow::on_filterSuspectSurnamePushButton_clicked(bool checked)
+{
+    if(checked){
+        if(ui->filterSuspectSurnameLineEdit->text().isEmpty()){
+            QMessageBox::information(this, "Помилка!", "Введіть прізвище!");
+            ui->filterSuspectSurnameLineEdit->setFocus();
+            return;
+        }
+        ui->filterSuspectSurnamePushButton->setText("Скасувати");
+        QSqlQueryModel* queryModel = new QSqlQueryModel();
+        queryModel->setQuery("SELECT * "
+                             "FROM `Підозрюваний` "
+                             "WHERE `Прізвище` = '" + ui->filterSuspectSurnameLineEdit->text() + "'");
+        ui->suspectTableView->setModel(queryModel);
+        ui->suspectTableView->resizeColumnsToContents();
+    }
+    else{
+        ui->filterSuspectSurnamePushButton->setText("Фільтрувати");
+        on_actionreloadDataBase_triggered();
+    }
+}
+

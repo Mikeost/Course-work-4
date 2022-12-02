@@ -48,6 +48,18 @@ private slots:
 
     void on_searchAction_triggered();
 
+    void on_filterTypePushButton_clicked(bool checked);
+
+    void on_filterRankPushButton_clicked(bool checked);
+
+    void on_filterWitnessGroupCodePushButton_clicked(bool checked);
+
+    void on_filterWitnessSurnamePushButton_clicked(bool checked);
+
+    void on_filterSuspectsGroupCodePushButton_clicked(bool checked);
+
+    void on_filterSuspectSurnamePushButton_clicked(bool checked);
+
 private:
     Ui::DataBaseWindow *ui;
 

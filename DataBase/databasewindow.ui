@@ -15,17 +15,69 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
+    <item row="1" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>4</number>
+       <number>5</number>
       </property>
       <widget class="QWidget" name="criminalCaseTab">
        <attribute name="title">
         <string>Справа</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_2">
-        <item row="0" column="0">
+        <item row="1" column="2">
+         <widget class="QPushButton" name="filterTypePushButton">
+          <property name="text">
+           <string>Фільтрувати</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QComboBox" name="filterTypeComboBox">
+          <item>
+           <property name="text">
+            <string>Кримінальна справа</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Цивільна справа</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Адміністративна справа</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="filterTypeLabel">
+          <property name="text">
+           <string>Фільтр за типом справи:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>400</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0" colspan="4">
          <widget class="QTableView" name="criminalCaseTableView">
           <property name="selectionMode">
            <enum>QAbstractItemView::ExtendedSelection</enum>
@@ -42,7 +94,43 @@
         <string>Слідчий</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_3">
-        <item row="0" column="0">
+        <item row="1" column="0">
+         <widget class="QLabel" name="filterRankLabel">
+          <property name="text">
+           <string>Фільтр за званням:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="filterRankLineEdit"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="filterRankPushButton">
+          <property name="text">
+           <string>Фільтрувати</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>400</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0" colspan="4">
          <widget class="QTableView" name="detectiveTableView">
           <property name="sortingEnabled">
            <bool>true</bool>
@@ -56,7 +144,43 @@
         <string>Група свідків</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_4">
-        <item row="0" column="0">
+        <item row="1" column="0">
+         <widget class="QLabel" name="filterWitnessGroupCodeLabel">
+          <property name="text">
+           <string>Фільтр за кодом групи:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="filterWitnessGroupCodeLineEdit"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="filterWitnessGroupCodePushButton">
+          <property name="text">
+           <string>Фільтрувати</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>400</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0" colspan="4">
          <widget class="QTableView" name="witnessGroupTableView">
           <property name="selectionMode">
            <enum>QAbstractItemView::MultiSelection</enum>
@@ -73,7 +197,43 @@
         <string>Свідок</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_5">
-        <item row="0" column="0">
+        <item row="1" column="0">
+         <widget class="QLabel" name="filterWitnessSurnameLabel">
+          <property name="text">
+           <string>Фільтр за прізвищем:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="filterWitnessSurnameLineEdit"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="filterWitnessSurnamePushButton">
+          <property name="text">
+           <string>Фільтрувати</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>400</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0" colspan="4">
          <widget class="QTableView" name="witnessTableView">
           <property name="sortingEnabled">
            <bool>true</bool>
@@ -87,7 +247,43 @@
         <string>Група підозрюваних</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_6">
-        <item row="0" column="0">
+        <item row="1" column="3">
+         <spacer name="horizontalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>400</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="filterSuspectsGroupCodeLabel">
+          <property name="text">
+           <string>Фільтр за кодом групи:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="filterSuspectsGroupCodeLineEdit"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="filterSuspectsGroupCodePushButton">
+          <property name="text">
+           <string>Фільтрувати</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="4">
          <widget class="QTableView" name="suspectsGroupTableView">
           <property name="selectionMode">
            <enum>QAbstractItemView::MultiSelection</enum>
@@ -104,7 +300,43 @@
         <string>Підозрюваний</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_7">
-        <item row="0" column="0">
+        <item row="1" column="0">
+         <widget class="QLabel" name="filterSuspectSurnameLabel">
+          <property name="text">
+           <string>Фільтр за прізвищем:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="filterSuspectSurnameLineEdit"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="filterSuspectSurnamePushButton">
+          <property name="text">
+           <string>Фільтрувати</string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <spacer name="horizontalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>400</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0" colspan="4">
          <widget class="QTableView" name="suspectTableView">
           <property name="iconSize">
            <size>
@@ -173,6 +405,9 @@
    <property name="toolTip">
     <string>Додати запис</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
   </action>
   <action name="actionEditRecord">
    <property name="icon">
@@ -184,6 +419,9 @@
    </property>
    <property name="toolTip">
     <string>Редагувати запис</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
    </property>
   </action>
   <action name="actionRemoveRecord">
@@ -197,6 +435,9 @@
    <property name="toolTip">
     <string>Видалити запис</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
   </action>
   <action name="actionreloadDataBase">
    <property name="icon">
@@ -209,6 +450,9 @@
    <property name="toolTip">
     <string>Оновити БД</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
   </action>
   <action name="searchAction">
    <property name="icon">
@@ -217,6 +461,9 @@
    </property>
    <property name="text">
     <string>Знайти</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
    </property>
   </action>
  </widget>
