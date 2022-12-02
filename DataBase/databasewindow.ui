@@ -487,8 +487,26 @@
     <addaction name="actionThirdQuery"/>
     <addaction name="actionFourthQuery"/>
    </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>Звіти</string>
+    </property>
+    <widget class="QMenu" name="menu_4">
+     <property name="title">
+      <string>За таблицями</string>
+     </property>
+     <addaction name="actionReportCriminalCase"/>
+     <addaction name="actionReportDetective"/>
+     <addaction name="actionReportGroupWitnesses"/>
+     <addaction name="actionReportWitness"/>
+     <addaction name="actionReportGroupSuspects"/>
+     <addaction name="actionReportSuspect"/>
+    </widget>
+    <addaction name="menu_4"/>
+   </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
@@ -509,6 +527,7 @@
    <addaction name="searchAction"/>
    <addaction name="separator"/>
    <addaction name="actionQueries"/>
+   <addaction name="actionReports"/>
   </widget>
   <action name="actionAddRecord">
    <property name="icon">
@@ -612,6 +631,48 @@
    </property>
    <property name="toolTip">
     <string>Запити</string>
+   </property>
+  </action>
+  <action name="actionReports">
+   <property name="icon">
+    <iconset resource="media.qrc">
+     <normaloff>:/icons/icons/report.png</normaloff>:/icons/icons/report.png</iconset>
+   </property>
+   <property name="text">
+    <string>Звіти</string>
+   </property>
+   <property name="toolTip">
+    <string>Звіти</string>
+   </property>
+  </action>
+  <action name="actionReportCriminalCase">
+   <property name="text">
+    <string>Табл. &quot;Справа&quot;</string>
+   </property>
+  </action>
+  <action name="actionReportDetective">
+   <property name="text">
+    <string>Табл. &quot;Слідчий&quot;</string>
+   </property>
+  </action>
+  <action name="actionReportGroupWitnesses">
+   <property name="text">
+    <string>Табл. &quot;Група свідків&quot;</string>
+   </property>
+  </action>
+  <action name="actionReportWitness">
+   <property name="text">
+    <string>Табл. &quot;Свідок&quot;</string>
+   </property>
+  </action>
+  <action name="actionReportGroupSuspects">
+   <property name="text">
+    <string>Табл. &quot;Група підозрюваних&quot;</string>
+   </property>
+  </action>
+  <action name="actionReportSuspect">
+   <property name="text">
+    <string>Табл. &quot;Підозрюваний&quot;</string>
    </property>
   </action>
  </widget>

@@ -70,6 +70,20 @@ private slots:
 
     void on_actionQueries_triggered();
 
+    void on_actionReportCriminalCase_triggered();
+
+    void on_actionReportDetective_triggered();
+
+    void on_actionReportGroupWitnesses_triggered();
+
+    void on_actionReportWitness_triggered();
+
+    void on_actionReportGroupSuspects_triggered();
+
+    void on_actionReportSuspect_triggered();
+
+    void on_actionReports_triggered();
+
 private:
     Ui::DataBaseWindow *ui;
 

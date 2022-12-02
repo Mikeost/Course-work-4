@@ -3,13 +3,15 @@
 #include <QMessageBox>
 #include <QInputDialog>
 #include <QLineEdit>
+#include <QFile>
+#include <QDir>
+#include <QDesktopServices>
 
 DataBaseWindow::DataBaseWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::DataBaseWindow)
 {
     ui->setupUi(this);
-
 
     dataBaseInit();
 
@@ -603,12 +605,14 @@ void DataBaseWindow::on_actionFourthQuery_triggered()
 
 void DataBaseWindow::on_actionQueries_triggered()
 {
+    bool isOk = false;
     QStringList queries = { "Інформація про кількість томів кожного типу справи",
                             "Інформація про справи за заданим періодом",
                             "Інформація про свідків, які задіяні в заданій справі",
-                            "Інформація про підозрюваних, які задіяні в заданій справі"
-                          };
-    QString query = QInputDialog::getItem(this, "Запит", "Оберіть запит:", queries, 0, QInputDialog::UseListViewForComboBoxItems);
+                            "Інформація про підозрюваних, які задіяні в заданій справі" };
+    QString query = QInputDialog::getItem(this, "Запит", "Оберіть запит:", queries, 0, QInputDialog::UseListViewForComboBoxItems, &isOk);
+
+    if(!isOk) return;
 
     if(query == queries.at(0)){
         on_actionFirstQuery_triggered();
@@ -621,6 +625,375 @@ void DataBaseWindow::on_actionQueries_triggered()
     }
     else if(query == queries.at(3)){
         on_actionFourthQuery_triggered();
+    }
+}
+
+
+void DataBaseWindow::on_actionReportCriminalCase_triggered()
+{
+    QString path = QDir::currentPath() + QString("Звіт за таблицею \"Справа\".html");
+    QFile file(path);
+    QString firstReport;
+    if(!file.open(QIODevice::WriteOnly)){
+        file.close();
+    }
+    else {
+        firstReport += "<!DOCTYPE html>"
+                       "<html>"
+                       "<head>"
+                            "<title>Звіт за таблицею \"Справа\"</title>"
+                            "<style>"
+                                "table {"
+                                  "border-collapse: collapse;"
+                                  "width: 100%;"
+                                "}"
+                                "th, td {"
+                                  "text-align: center;"
+                                  "padding: 8px;"
+                                "}"
+
+                                "tr:nth-child(even) {"
+                                  "background-color: orange;"
+                                "}"
+                            "</style>"
+                       "</head>"
+                       "<body>"
+                            "<center><h1>Звіт за таблицею \"Справа\"</h1></center>"
+                            "<center><table>"
+                            "<tr>"
+                                "<th>Номер справи</th>"
+                                "<th>Найменування</th>"
+                                "<th>Тип справи</th>"
+                                "<th>Підстава</th>"
+                                "<th>Дата відкриття</th>"
+                                "<th>Дата закриття</th>"
+                                "<th>Кількість томів</th>"
+                                "<th>Табельний номер слідчого</th>"
+                            "</tr>";
+        for(int row = 0; row < ui->criminalCaseTableView->model()->rowCount(); ++row){
+            firstReport += "<tr>";
+            for(int col = 0; col < ui->criminalCaseTableView->model()->columnCount(); ++col){
+                firstReport += "<td>" + ui->criminalCaseTableView->model()->index(row, col).data().toString() + "</td>";
+            }
+            firstReport += "</tr>";
+        }
+
+        firstReport += "</table></center></body></html>";
+        file.write(firstReport.toUtf8());
+        file.close();
+        QDesktopServices::openUrl(QUrl("file://" + path, QUrl::TolerantMode));
+    }
+
+}
+
+
+void DataBaseWindow::on_actionReportDetective_triggered()
+{
+    QString path = QDir::currentPath() + QString("Звіт за таблицею \"Слідчий\".html");
+    QFile file(path);
+    QString firstReport;
+    if(!file.open(QIODevice::WriteOnly)){
+        file.close();
+    }
+    else {
+        firstReport += "<!DOCTYPE html>"
+                       "<html>"
+                       "<head>"
+                            "<title>Звіт за таблицею \"Слідчий\"</title>"
+                            "<style>"
+                                "table {"
+                                  "border-collapse: collapse;"
+                                  "width: 100%;"
+                                "}"
+                                "th, td {"
+                                  "text-align: center;"
+                                  "padding: 8px;"
+                                "}"
+
+                                "tr:nth-child(even) {"
+                                  "background-color: orange;"
+                                "}"
+                            "</style>"
+                       "</head>"
+                       "<body>"
+                            "<center><h1>Звіт за таблицею \"Слідчий\"</h1></center>"
+                            "<center><table>"
+                            "<tr>"
+                                "<th>Табельний номер</th>"
+                                "<th>Прізвище</th>"
+                                "<th>Ім'я</th>"
+                                "<th>По батькові</th>"
+                                "<th>Звання</th>"
+                                "<th>Телефон</th>"
+                            "</tr>";
+        for(int row = 0; row < ui->detectiveTableView->model()->rowCount(); ++row){
+            firstReport += "<tr>";
+            for(int col = 0; col < ui->detectiveTableView->model()->columnCount(); ++col){
+                firstReport += "<td>" + ui->detectiveTableView->model()->index(row, col).data().toString() + "</td>";
+            }
+            firstReport += "</tr>";
+        }
+
+        firstReport += "</table></center></body></html>";
+        file.write(firstReport.toUtf8());
+        file.close();
+        QDesktopServices::openUrl(QUrl("file://" + path, QUrl::TolerantMode));
+    }
+}
+
+
+void DataBaseWindow::on_actionReportGroupWitnesses_triggered()
+{
+    QString path = QDir::currentPath() + QString("Звіт за таблицею \"Група свідків\".html");
+    QFile file(path);
+    QString firstReport;
+    if(!file.open(QIODevice::WriteOnly)){
+        file.close();
+    }
+    else {
+        firstReport += "<!DOCTYPE html>"
+                       "<html>"
+                       "<head>"
+                            "<title>Звіт за таблицею \"Група свідків\"</title>"
+                            "<style>"
+                                "table {"
+                                  "border-collapse: collapse;"
+                                  "width: 100%;"
+                                "}"
+                                "th, td {"
+                                  "text-align: center;"
+                                  "padding: 8px;"
+                                "}"
+
+                                "tr:nth-child(even) {"
+                                  "background-color: orange;"
+                                "}"
+                            "</style>"
+                       "</head>"
+                       "<body>"
+                            "<center><h1>Звіт за таблицею \"Група свідків\"</h1></center>"
+                            "<center><table>"
+                            "<tr>"
+                                "<th>Код групи</th>"
+                                "<th>Номер справи</th>"
+                                "<th>Код свідка</th>"
+                            "</tr>";
+        for(int row = 0; row < ui->witnessGroupTableView->model()->rowCount(); ++row){
+            firstReport += "<tr>";
+            for(int col = 0; col < ui->witnessGroupTableView->model()->columnCount(); ++col){
+                firstReport += "<td>" + ui->witnessGroupTableView->model()->index(row, col).data().toString() + "</td>";
+            }
+            firstReport += "</tr>";
+        }
+
+        firstReport += "</table></center></body></html>";
+        file.write(firstReport.toUtf8());
+        file.close();
+        QDesktopServices::openUrl(QUrl("file://" + path, QUrl::TolerantMode));
+    }
+}
+
+
+void DataBaseWindow::on_actionReportWitness_triggered()
+{
+    QString path = QDir::currentPath() + QString("Звіт за таблицею \"Свідок\".html");
+    QFile file(path);
+    QString firstReport;
+    if(!file.open(QIODevice::WriteOnly)){
+        file.close();
+    }
+    else {
+        firstReport += "<!DOCTYPE html>"
+                       "<html>"
+                       "<head>"
+                            "<title>Звіт за таблицею \"Свідок\"</title>"
+                            "<style>"
+                                "table {"
+                                  "border-collapse: collapse;"
+                                  "width: 100%;"
+                                "}"
+                                "th, td {"
+                                  "text-align: center;"
+                                  "padding: 8px;"
+                                "}"
+
+                                "tr:nth-child(even) {"
+                                  "background-color: orange;"
+                                "}"
+                            "</style>"
+                       "</head>"
+                       "<body>"
+                            "<center><h1>Звіт за таблицею \"Свідок\"</h1></center>"
+                            "<center><table>"
+                            "<tr>"
+                                "<th>Код свідка</th>"
+                                "<th>Прізвище</th>"
+                                "<th>Ім'я</th>"
+                                "<th>По батькові</th>"
+                                "<th>Дата народження</th>"
+                                "<th>Телефон</th>"
+                            "</tr>";
+        for(int row = 0; row < ui->witnessTableView->model()->rowCount(); ++row){
+            firstReport += "<tr>";
+            for(int col = 0; col < ui->witnessTableView->model()->columnCount(); ++col){
+                firstReport += "<td>" + ui->witnessTableView->model()->index(row, col).data().toString() + "</td>";
+            }
+            firstReport += "</tr>";
+        }
+
+        firstReport += "</table></center></body></html>";
+        file.write(firstReport.toUtf8());
+        file.close();
+        QDesktopServices::openUrl(QUrl("file://" + path, QUrl::TolerantMode));
+    }
+}
+
+
+void DataBaseWindow::on_actionReportGroupSuspects_triggered()
+{
+    QString path = QDir::currentPath() + QString("Звіт за таблицею \"Група підозрюваних\".html");
+    QFile file(path);
+    QString firstReport;
+    if(!file.open(QIODevice::WriteOnly)){
+        file.close();
+    }
+    else {
+        firstReport += "<!DOCTYPE html>"
+                       "<html>"
+                       "<head>"
+                            "<title>Звіт за таблицею \"Група підозрюваних\"</title>"
+                            "<style>"
+                                "table {"
+                                  "border-collapse: collapse;"
+                                  "width: 100%;"
+                                "}"
+                                "th, td {"
+                                  "text-align: center;"
+                                  "padding: 8px;"
+                                "}"
+
+                                "tr:nth-child(even) {"
+                                  "background-color: orange;"
+                                "}"
+                            "</style>"
+                       "</head>"
+                       "<body>"
+                            "<center><h1>Звіт за таблицею \"Група підозрюваних\"</h1></center>"
+                            "<center><table>"
+                            "<tr>"
+                                "<th>Код групи</th>"
+                                "<th>Номер справи</th>"
+                                "<th>Код підозрюваного</th>"
+                            "</tr>";
+        for(int row = 0; row < ui->suspectsGroupTableView->model()->rowCount(); ++row){
+            firstReport += "<tr>";
+            for(int col = 0; col < ui->suspectsGroupTableView->model()->columnCount(); ++col){
+                firstReport += "<td>" + ui->suspectsGroupTableView->model()->index(row, col).data().toString() + "</td>";
+            }
+            firstReport += "</tr>";
+        }
+
+        firstReport += "</table></center></body></html>";
+        file.write(firstReport.toUtf8());
+        file.close();
+        QDesktopServices::openUrl(QUrl("file://" + path, QUrl::TolerantMode));
+    }
+}
+
+
+void DataBaseWindow::on_actionReportSuspect_triggered()
+{
+    QString path = QDir::currentPath() + QString("Звіт за таблицею \"Підозрюваний\".html");
+    QFile file(path);
+    QString firstReport;
+    if(!file.open(QIODevice::WriteOnly)){
+        file.close();
+    }
+    else {
+        firstReport += "<!DOCTYPE html>"
+                       "<html>"
+                       "<head>"
+                            "<title>Звіт за таблицею \"Підозрюваний\"</title>"
+                            "<style>"
+                                "table {"
+                                  "border-collapse: collapse;"
+                                  "width: 100%;"
+                                "}"
+                                "th, td {"
+                                  "text-align: center;"
+                                  "padding: 8px;"
+                                "}"
+
+                                "tr:nth-child(even) {"
+                                  "background-color: orange;"
+                                "}"
+                            "</style>"
+                       "</head>"
+                       "<body>"
+                            "<center><h1>Звіт за таблицею \"Підозрюваний\"</h1></center>"
+                            "<center><table>"
+                            "<tr>"
+                                "<th>Код підозрюваного</th>"
+                                "<th>Прізвище</th>"
+                                "<th>Ім'я</th>"
+                                "<th>По батькові</th>"
+                                "<th>Дата народження</th>"
+                                "<th>Телефон</th>"
+                                "<th>Місце проживання</th>"
+                            "</tr>";
+        for(int row = 0; row < ui->suspectTableView->model()->rowCount(); ++row){
+            firstReport += "<tr>";
+            for(int col = 0; col < ui->suspectTableView->model()->columnCount(); ++col){
+                firstReport += "<td>" + ui->suspectTableView->model()->index(row, col).data().toString() + "</td>";
+            }
+            firstReport += "</tr>";
+        }
+
+        firstReport += "</table></center></body></html>";
+        file.write(firstReport.toUtf8());
+        file.close();
+        QDesktopServices::openUrl(QUrl("file://" + path, QUrl::TolerantMode));
+    }
+}
+
+
+void DataBaseWindow::on_actionReports_triggered()
+{
+    bool isOk = false;
+    QStringList reports = { "Звіти за таблицями", "Звіти за запросами", };
+    QString reportChoice = QInputDialog::getItem(this, "Звіти", "Оберіть вид звіту:", reports, 0, QInputDialog::UseListViewForComboBoxItems, &isOk);
+
+    if(!isOk) return;
+
+    if(reportChoice == reports.at(0)){
+        QStringList reportsTable = { "Звіт за табл. \"Справа\"", "Звіт за табл. \"Слідчий\"",
+                                     "Звіт за табл. \"Група свідків\"", "Звіт за табл. \"Свідок\"",
+                                     "Звіт за табл. \"Група підозрюваних\"", "Звіт за табл. \"Підозрюваний\"" };
+        QString reportChoiceSecond = QInputDialog::getItem(this, "Звіти за таблицями", "Оберіть звіт:", reportsTable, 0, QInputDialog::UseListViewForComboBoxItems, &isOk);
+
+        if(!isOk) return;
+
+        if(reportChoiceSecond == reportsTable.at(0)){
+            on_actionReportCriminalCase_triggered();
+        }
+        else if(reportChoiceSecond == reportsTable.at(1)){
+            on_actionReportDetective_triggered();
+        }
+        else if(reportChoiceSecond == reportsTable.at(2)){
+            on_actionReportGroupWitnesses_triggered();
+        }
+        else if(reportChoiceSecond == reportsTable.at(3)){
+            on_actionReportWitness_triggered();
+        }
+        else if(reportChoiceSecond == reportsTable.at(4)){
+            on_actionReportGroupSuspects_triggered();
+        }
+        else if(reportChoiceSecond == reportsTable.at(5)){
+            on_actionReportSuspect_triggered();
+        }
+    }
+    else if(reportChoice == reports.at(1)){
+
     }
 }
 

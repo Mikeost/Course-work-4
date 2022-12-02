@@ -6,5 +6,6 @@
         <file>icons/reloadDatabase.png</file>
         <file>icons/search.png</file>
         <file>icons/queries.png</file>
+        <file>icons/report.png</file>
     </qresource>
 </RCC>
