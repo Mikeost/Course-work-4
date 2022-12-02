@@ -12,6 +12,11 @@ DataBaseWindow::DataBaseWindow(QWidget *parent) :
 
 
     dataBaseInit();
+
+    ui->tabWidget->setTabVisible(6, false);
+    ui->tabWidget->setTabVisible(7, false);
+    ui->tabWidget->setTabVisible(8, false);
+    ui->tabWidget->setTabVisible(9, false);
 }
 
 void DataBaseWindow::dataBaseInit(){
@@ -153,6 +158,11 @@ void DataBaseWindow::on_actionreloadDataBase_triggered()
     suspectTableModel->select();
     ui->suspectTableView->setModel(suspectTableModel);
     ui->suspectTableView->resizeColumnsToContents();
+
+    ui->tabWidget->setTabVisible(6, false);
+    ui->tabWidget->setTabVisible(7, false);
+    ui->tabWidget->setTabVisible(8, false);
+    ui->tabWidget->setTabVisible(9, false);
 }
 
 
@@ -259,7 +269,7 @@ void DataBaseWindow::on_searchAction_triggered()
     switch(ui->tabWidget->currentIndex()){
         case 0:
              inputTask = QInputDialog::getText(this, tr("Пошук за ключовим полем"),
-                                                            tr("Введіть номер справи:"), QLineEdit::Normal);
+                                                     tr("Введіть номер справи:"), QLineEdit::Normal);
             for (int var = 0; var < ui->criminalCaseTableView->model()->rowCount(); ++var) {
                         if(ui->criminalCaseTableView->model()->index(var, 0).data() == inputTask){
                             ui->criminalCaseTableView->selectRow(var);
@@ -272,7 +282,7 @@ void DataBaseWindow::on_searchAction_triggered()
 
         case 1:
             inputTask = QInputDialog::getText(this, tr("Пошук за ключовим полем"),
-                                                            tr("Введіть табельний номер слідчого:"), QLineEdit::Normal);
+                                                    tr("Введіть табельний номер слідчого:"), QLineEdit::Normal);
             for (int var = 0; var < ui->detectiveTableView->model()->rowCount(); ++var) {
                         if(ui->detectiveTableView->model()->index(var, 0).data() == inputTask){
                             ui->detectiveTableView->selectRow(var);
@@ -285,7 +295,7 @@ void DataBaseWindow::on_searchAction_triggered()
 
         case 2:
             inputTask = QInputDialog::getText(this, tr("Пошук за ключовим полем"),
-                                                            tr("Введіть код групи свідків:"), QLineEdit::Normal);
+                                                    tr("Введіть код групи свідків:"), QLineEdit::Normal);
             ui->witnessGroupTableView->clearSelection();
             for (int var = 0; var < ui->witnessGroupTableView->model()->rowCount(); ++var) {
                         if(ui->witnessGroupTableView->model()->index(var, 0).data() == inputTask){
@@ -301,7 +311,7 @@ void DataBaseWindow::on_searchAction_triggered()
 
         case 3:
             inputTask = QInputDialog::getText(this, tr("Пошук за ключовим полем"),
-                                                            tr("Введіть код свідка:"), QLineEdit::Normal);
+                                                    tr("Введіть код свідка:"), QLineEdit::Normal);
             for (int var = 0; var < ui->witnessTableView->model()->rowCount(); ++var) {
                         if(ui->witnessTableView->model()->index(var, 0).data() == inputTask){
                             ui->witnessTableView->selectRow(var);
@@ -314,7 +324,7 @@ void DataBaseWindow::on_searchAction_triggered()
 
         case 4:
             inputTask = QInputDialog::getText(this, tr("Пошук за ключовим полем"),
-                                                            tr("Введіть код групи підозрюваних:"), QLineEdit::Normal);
+                                                    tr("Введіть код групи підозрюваних:"), QLineEdit::Normal);
             ui->suspectsGroupTableView->clearSelection();
             for (int var = 0; var < ui->suspectsGroupTableView->model()->rowCount(); ++var) {
                         if(ui->suspectsGroupTableView->model()->index(var, 0).data() == inputTask){
@@ -330,7 +340,7 @@ void DataBaseWindow::on_searchAction_triggered()
 
         case 5:
             inputTask = QInputDialog::getText(this, tr("Пошук за ключовим полем"),
-                                                            tr("Введіть код підозрюваного:"), QLineEdit::Normal);
+                                                    tr("Введіть код підозрюваного:"), QLineEdit::Normal);
             for (int var = 0; var < ui->suspectTableView->model()->rowCount(); ++var) {
                         if(ui->suspectTableView->model()->index(var, 0).data() == inputTask){
                             ui->suspectTableView->selectRow(var);
@@ -476,3 +486,117 @@ void DataBaseWindow::on_filterSuspectSurnamePushButton_clicked(bool checked)
     }
 }
 
+
+void DataBaseWindow::on_actionFirstQuery_triggered()
+{
+    ui->tabWidget->setTabVisible(6, true);
+    ui->tabWidget->setCurrentIndex(6);
+    QSqlQueryModel* queryModel = new QSqlQueryModel();
+    queryModel->setQuery("SELECT `Тип справи`, COUNT(`Кількість томів`) as `Кількість томів` "
+                         "FROM `Справа` "
+                         "GROUP BY `Тип справи`");
+    ui->firstQueryTableView->setModel(queryModel);
+    ui->firstQueryTableView->resizeColumnsToContents();
+}
+
+
+void DataBaseWindow::on_actionSecondQuery_triggered()
+{
+    QString firstDate;
+    QString secondDate;
+    bool isContinue = false;
+    while(true){
+        firstDate = QInputDialog::getText(this, tr("Початок періоду"),
+                                                tr("Введіть початок періоду (yyyy-mm-dd):"),
+                                                QLineEdit::Normal, "2022-01-01", &isContinue);
+
+        if(!isContinue){
+            return;
+        }
+        else{
+            isContinue = false;
+        }
+
+        if(firstDate.isEmpty()){
+            QMessageBox::information(this, "Помилка!", "Введіть початок періоду!");
+        }
+        else break;
+    }
+
+    while(true){
+        secondDate = QInputDialog::getText(this, tr("Кінець періоду"),
+                                                 tr("Введіть кінець періоду (yyyy-mm-dd):"),
+                                                 QLineEdit::Normal, "2022-05-10", &isContinue);
+
+        if(!isContinue){return;}
+
+        if(secondDate.isEmpty()){
+            QMessageBox::information(this, "Помилка!", "Введіть кінець періоду!");
+        }
+        else break;
+    }
+
+    ui->tabWidget->setTabVisible(7, true);
+    ui->tabWidget->setCurrentIndex(7);
+    QSqlQueryModel* queryModel = new QSqlQueryModel();
+    queryModel->setQuery("SELECT * FROM `Справа` WHERE `Дата відкриття` > '" + firstDate + "' AND `Дата відкриття` < '" + secondDate + "'");
+    ui->secondQueryTableView->setModel(queryModel);
+    ui->secondQueryTableView->resizeColumnsToContents();
+}
+
+
+void DataBaseWindow::on_actionThirdQuery_triggered()
+{
+    ui->tabWidget->setCurrentIndex(0);
+    QString criminalCaseNumber;
+    bool isContinue = false;
+    while(true){
+        criminalCaseNumber = QInputDialog::getText(this, tr("Введення справи"),
+                                                         tr("Введіть номер справи:"),
+                                                         QLineEdit::Normal, "", &isContinue);
+        if(!isContinue){return;}
+
+        if(criminalCaseNumber.isEmpty()){
+            QMessageBox::information(this, "Помилка!", "Введіть номер справи!");
+        }
+        else break;
+    }
+
+    ui->tabWidget->setTabVisible(8, true);
+    ui->tabWidget->setCurrentIndex(8);
+    QSqlQueryModel* queryModel = new QSqlQueryModel();
+    queryModel->setQuery("SELECT `Група свідків`.`Номер справи`, `Свідок`.*"
+                         "FROM `Свідок`, `Група свідків`"
+                         "WHERE `Група свідків`.`Номер справи` = '" + criminalCaseNumber +
+                         "' AND `Група свідків`.`Код свідка` = `Свідок`.`Код свідка`");
+    ui->thirdQueryTableView->setModel(queryModel);
+    ui->thirdQueryTableView->resizeColumnsToContents();
+}
+
+
+void DataBaseWindow::on_actionFourthQuery_triggered()
+{
+    ui->tabWidget->setCurrentIndex(0);
+    QString criminalCaseNumber;
+    bool isContinue = false;
+    while(true){
+        criminalCaseNumber = QInputDialog::getText(this, tr("Введення справи"),
+                                                         tr("Введіть номер справи:"),
+                                                         QLineEdit::Normal, "", &isContinue);
+        if(!isContinue){return;}
+
+        if(criminalCaseNumber.isEmpty()){
+            QMessageBox::information(this, "Помилка!", "Введіть номер справи!");
+        }
+        else break;
+    }
+    ui->tabWidget->setTabVisible(9, true);
+    ui->tabWidget->setCurrentIndex(9);
+    QSqlQueryModel* queryModel = new QSqlQueryModel();
+    queryModel->setQuery("SELECT `Група підозрюваних`.`Номер справи`, `Підозрюваний`.*"
+                         "FROM `Підозрюваний`, `Група підозрюваних`"
+                         "WHERE `Група підозрюваних`.`Номер справи` = '" + criminalCaseNumber +
+                         "' AND `Група підозрюваних`.`Код підозрюваного` = `Підозрюваний`.`Код підозрюваного`");
+    ui->fourthQueryTableView->setModel(queryModel);
+    ui->fourthQueryTableView->resizeColumnsToContents();
+}

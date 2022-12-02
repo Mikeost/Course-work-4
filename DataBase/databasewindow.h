@@ -60,6 +60,14 @@ private slots:
 
     void on_filterSuspectSurnamePushButton_clicked(bool checked);
 
+    void on_actionFirstQuery_triggered();
+
+    void on_actionSecondQuery_triggered();
+
+    void on_actionThirdQuery_triggered();
+
+    void on_actionFourthQuery_triggered();
+
 private:
     Ui::DataBaseWindow *ui;
 
