@@ -84,6 +84,14 @@ private slots:
 
     void on_actionReports_triggered();
 
+    void on_actionReportFirstQuery_triggered();
+
+    void on_actionReportSecondQuery_triggered();
+
+    void on_actionReportThirdQuery_triggered();
+
+    void on_actionReportFourthQuery_triggered();
+
 private:
     Ui::DataBaseWindow *ui;
 
