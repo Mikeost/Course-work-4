@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page pageId="Page13" pageName="Запити" title="">
+    <abstract></abstract>
+    <keywords></keywords>
+    <contents>
+        <line Style="Heading1" Align="Center">
+            <content style="Heading1">Запити</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">Програмний продукт має можливість використовувати вбудованні запити на вибірку інформації. </content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">Програма містить чотири запита:</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">1. Запит, що містить інформацію про кількість томів кожного типу справи.</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">2. Запит, що містить інформацію про справи за заданим періодом.</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">3. Запит, що містить інформацію про свідків, які задіяні в заданій справі.</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">4. Запит, що містить інформацію про підозрюваних, які задіяні в заданій справі.</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">Запити можна викликати двома способами:</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">1. Через головне меню:</content>
+        </line>
+        <line Align="Center">
+            <image height="105.0" style="Custom4" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="499.0" topMargin="0.0" imageId="image_2022-12-03_17-23-55.png"></image>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">2. За допомогою кнопки на панелі інструментів, яка відкриває вікно вибіру запиту:</content>
+        </line>
+        <line Align="Center">
+            <image height="122.863" style="Custom4" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="122.863" topMargin="0.0" imageId="queries.png"></image>
+        </line>
+        <line Align="Center">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Center">
+            <content style="Custom0 bold italic">Піктограма кнопки визову запитів</content>
+        </line>
+        <line Align="Center">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Center">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Center">
+            <image height="153.0" style="Normal" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="444.0" topMargin="0.0" imageId="image_2022-12-03_17-30-08.png"></image>
+        </line>
+        <line Align="Center">
+            <content style="Custom0 bold italic">Зовнішній вигляд вікна вибору запиту</content>
+        </line>
+        <line Align="Center">
+            <content style="Normal"></content>
+        </line>
+    </contents>
+</page>

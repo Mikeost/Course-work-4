@@ -1267,3 +1267,10 @@ void DataBaseWindow::on_actionReportFourthQuery_triggered()
     }
 }
 
+
+void DataBaseWindow::on_actionHelp_triggered()
+{
+    QString path = QDir::currentPath() + QString("/Довідка користувача.pchelp");
+    QDesktopServices::openUrl(QUrl("file://" + path, QUrl::TolerantMode));
+}
+

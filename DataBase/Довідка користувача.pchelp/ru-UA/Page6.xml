@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page pageId="Page6" pageName="Маніпулювання записами" title="">
+    <abstract></abstract>
+    <keywords></keywords>
+    <contents>
+        <line Style="Heading1" Align="Center">
+            <content style="Heading1">Маніпулювання записами</content>
+        </line>
+        <line Align="Center">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">Програмний продукт дозволяє маніпулювати даними: додавати, редагувати, видаляти записи та оновлювати БД.</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4 bold">1. Додавання запису</content>
+            <content style="Custom4"> (звичайне та розширене).</content>
+        </line>
+        <line Align="Left">
+            <image height="60.328" style="Custom4" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="60.328" topMargin="0.0" imageId="1__#$!@%!#__addRecord.png"></image>
+        </line>
+        <line Align="Left">
+            <content style="Custom4 italic">Звичайне додавання запису</content>
+            <content style="Custom4"> - додання запису, за допомогою створення простого нового рядка в таблиці.</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4 italic">Розширене додавання запису</content>
+            <content style="Custom4"> - додання запису, за допомогою окремої форми зі спеціальними полями введення.</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4 bold">2. Редагування запису</content>
+            <content style="Custom4"> (звичайне та розширене).</content>
+        </line>
+        <line Align="Left">
+            <image height="63.504" style="Custom4 italic" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="63.504" topMargin="0.0" imageId="editRecord.png"></image>
+        </line>
+        <line Align="Left">
+            <content style="Custom4 italic">Звичайне редагування запису</content>
+            <content style="Custom4"> - редагування запису, за допомогою прямої зміни даних рядка в таблиці.</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4 italic">Розширене редагування запису</content>
+            <content style="Custom4"> - редагування запису, за допомогою окремої форми зі спеціальними полями введення.</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4 bold">3. Видалення запису</content>
+            <content style="Custom4">.</content>
+        </line>
+        <line Align="Left">
+            <image height="67.383" style="Custom4" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="67.383" topMargin="0.0" imageId="removeRecord.png"></image>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">Видалення запису відбувається за допомогою кнопки «видалити», запитавши перед цим у користувача чи дійсно він хоче видалити запис.</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4 bold">4. Оновлення БД</content>
+            <content style="Custom4">.</content>
+        </line>
+        <line Align="Left">
+            <image height="65.711" style="Custom4" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="65.711" topMargin="0.0" imageId="reloadDatabase.png"></image>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">Оновлення БД здійснюється за допомогою кнопки «оновити».</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Center">
+            <image height="72.291" style="Custom4" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="329.941" topMargin="0.0" imageId="image_2022-12-02_22-59-07.png"></image>
+        </line>
+        <line Align="Center">
+            <content style="Custom5 bold italic">Зовнішній вигляд кнопок на панелі інструментів</content>
+        </line>
+        <line Align="Center">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Center">
+            <image height="148.947" style="Custom4" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="289.914" topMargin="0.0" imageId="image_2022-12-03_17-25-29.png"></image>
+        </line>
+        <line Align="Center">
+            <content style="Custom5 bold italic">Зовнішній вигляд кнопок в головному меню</content>
+        </line>
+    </contents>
+</page>

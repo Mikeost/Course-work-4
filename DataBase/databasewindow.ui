@@ -538,6 +538,8 @@
    <addaction name="separator"/>
    <addaction name="actionQueries"/>
    <addaction name="actionReports"/>
+   <addaction name="separator"/>
+   <addaction name="actionHelp"/>
   </widget>
   <action name="actionAddRecord">
    <property name="icon">
@@ -703,6 +705,18 @@
   <action name="actionReportFourthQuery">
    <property name="text">
     <string>Інформація про підозрюваних, які задіяні в заданій справі</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="icon">
+    <iconset resource="media.qrc">
+     <normaloff>:/icons/icons/help.png</normaloff>:/icons/icons/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>Довідка</string>
+   </property>
+   <property name="toolTip">
+    <string>Довідка</string>
    </property>
   </action>
  </widget>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page pageId="Page14" pageName="Звіти" title="">
+    <abstract></abstract>
+    <keywords></keywords>
+    <contents>
+        <line Style="Heading1" Align="Center">
+            <content style="Heading1">Звіти</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">Програмний продукт має можливість створювати звіти по ходу роботи. </content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">Програма має два види звітів:</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">1. </content>
+            <content style="Custom4" linkTarget="helpcrafter://Page15">Звіти за таблицями</content>
+            <content style="Custom4">;</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">2. </content>
+            <content style="Custom4" linkTarget="helpcrafter://Page16">Звіти за запитами</content>
+            <content style="Custom4">.</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">Звіти можна створити двома способами:</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">1. Через головне меню:</content>
+        </line>
+        <line Align="Center">
+            <image height="91.563" style="Custom4" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="407.992" topMargin="0.0" imageId="image_2022-12-03_18-08-15.png"></image>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">2. За допомогою кнопки на панелі інструментів, яка відкриває вікно вибіру звіту:</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Center">
+            <image height="166.152" style="Custom4" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="166.152" topMargin="0.0" imageId="report.png"></image>
+        </line>
+        <line Align="Center">
+            <content style="Custom0 bold italic">Піктограма кнопки створення звітів</content>
+        </line>
+        <line Align="Center">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Center">
+            <image height="268.381" style="Custom4" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="452.67" topMargin="0.0" imageId="image_2022-12-03_18-09-54.png"></image>
+        </line>
+        <line Align="Center">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Center">
+            <content style="Custom0 bold italic">Зовнішній вигляд вікна вибору типу звітів</content>
+        </line>
+        <line Align="Center">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Center">
+            <image height="267.804" style="Custom0 bold italic" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="451.696" topMargin="0.0" imageId="image_2022-12-03_18-12-49.png"></image>
+        </line>
+        <line Align="Center">
+            <content style="Custom0 bold italic">Зовнішній вигляд вікна вибору звіту</content>
+        </line>
+        <line Align="Center">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">Після створення звіту, він одразу відкриється в браузері.</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+    </contents>
+</page>

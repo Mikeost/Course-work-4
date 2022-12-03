@@ -7,5 +7,6 @@
         <file>icons/search.png</file>
         <file>icons/queries.png</file>
         <file>icons/report.png</file>
+        <file>icons/help.png</file>
     </qresource>
 </RCC>

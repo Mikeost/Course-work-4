@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page pageId="Page10" pageName="Оновлення бази даних" title="">
+    <abstract></abstract>
+    <keywords></keywords>
+    <contents>
+        <line Style="Heading1" Align="Center">
+            <content style="Heading1">Оновлення БД</content>
+        </line>
+        <line Align="Left">
+            <image height="59.277" style="Custom4" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="59.277" topMargin="0.0" imageId="reloadDatabase.png"></image>
+            <content style="Custom13">  </content>
+            <content style="Custom5">- Кнопка оновлення БД (</content>
+            <content style="Custom">⌘</content>
+            <content style="Custom5">cmd + R).</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">Для обновлення БД необхідно натиснути кнопку «Оновити» на панелі інструментів, після чого будуть оновлені всі таблиці.</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+    </contents>
+</page>

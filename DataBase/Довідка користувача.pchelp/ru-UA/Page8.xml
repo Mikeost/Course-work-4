@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page pageId="Page8" pageName="Редагування запису" title="">
+    <abstract></abstract>
+    <keywords></keywords>
+    <contents>
+        <line Style="Heading1" Align="Center">
+            <content style="Heading1">Редагування запису</content>
+        </line>
+        <line Align="Left">
+            <image height="54.578" style="Custom4 italic" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="54.578" topMargin="0.0" imageId="editRecord.png"></image>
+            <content style="Normal">  </content>
+            <content style="Custom5">- Кнопка редагування запису (</content>
+            <content style="Custom">⌘</content>
+            <content style="Custom5">cmd + E).</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">Після натискання кнопки редагування запису на панелі інструментів, відкривається діалогове вікно, в яке потрібно ввести номер запису для редагування. </content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Center">
+            <image height="144.0" style="Custom4" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="284.0" topMargin="0.0" imageId="image_2022-12-02_23-11-27.png"></image>
+        </line>
+        <line Align="Center">
+            <content style="Custom0 italic">Зовнішній вигляд діалогового вікна</content>
+        </line>
+        <line Align="Center">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">Після ведення номеру запису і натискання кнопки «ОК», відкривається форма, в полях якої знаходиться інформація про обраний запис для редагування. На формі є спеціальні поля, які дозволяють внести дані з мінімальною ймовірністю на припущення помилки.</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Center">
+            <image height="558.249" style="Custom5 italic" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="372.711" topMargin="0.0" imageId="image_2022-12-02_23-12-54.png"></image>
+        </line>
+        <line Align="Center">
+            <content style="Custom0 italic">Зовнішній вигляд форми</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+    </contents>
+</page>

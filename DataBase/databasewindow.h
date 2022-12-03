@@ -92,6 +92,8 @@ private slots:
 
     void on_actionReportFourthQuery_triggered();
 
+    void on_actionHelp_triggered();
+
 private:
     Ui::DataBaseWindow *ui;
 

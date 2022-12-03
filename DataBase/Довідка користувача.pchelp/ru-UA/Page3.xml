@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page pageId="Page3" pageName="Глосарій" title="">
+    <abstract></abstract>
+    <keywords></keywords>
+    <contents>
+        <line Style="Heading1" Align="Left">
+            <content style="Heading1">Глосарій</content>
+            <textElement rightMargin="0" width="1" style="Heading2" textId="HorizontalRule" leftMargin="0" color="RGBA(0,0,0,1.000000)"></textElement>
+            <content style="Custom4">Визначення та опис основних термінів, які використовуються при роботі з автоматизованою інформаційною системою «Міського відділу внутрішніх справ, слідчого відділу». </content>
+        </line>
+        <list ListStyle="listDecimal">
+            <listItem style="Heading2">
+                <line Align="Left">
+                    <content style="Heading2">БД - база даних.</content>
+                </line>
+            </listItem>
+            <listItem style="Heading2">
+                <line Align="Left">
+                    <content style="Heading2">АІС - автоматизована інформаційна система.</content>
+                </line>
+            </listItem>
+            <listItem style="Heading2">
+                <line Align="Left">
+                    <content style="Heading2">Запит - основний інструмент вибірки, оновлення та обробки даних у таблицях бази даних.</content>
+                </line>
+            </listItem>
+            <listItem style="Heading2">
+                <line Align="Left">
+                    <content style="Heading2">Звіт - об'єкт бази даних, що використовується при виведенні структурованої інформації на екран, принтер або файл.</content>
+                </line>
+            </listItem>
+        </list>
+    </contents>
+</page>

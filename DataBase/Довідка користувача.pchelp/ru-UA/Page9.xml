@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page pageId="Page9" pageName="Видалення запису" title="">
+    <abstract></abstract>
+    <keywords></keywords>
+    <contents>
+        <line Style="Heading1" Align="Center">
+            <content style="Heading1">Видалення запису</content>
+        </line>
+        <line Align="Left">
+            <image height="59.945" style="Custom4" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="59.945" topMargin="0.0" imageId="removeRecord.png"></image>
+            <content style="Custom13">  </content>
+            <content style="Custom5">- Кнопка видалення запису (</content>
+            <content style="Custom">⌘</content>
+            <content style="Custom5">cmd + D).</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">Для видалення запису необхідно вибрати потрібний запис і на панелі інструментів натиснути кнопку "Видалити", після чого з'явиться діалогове вікно для уточнення дій користувача.</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Center">
+            <image height="206.634" style="Custom4" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="182.164" topMargin="0.0" imageId="image_2022-12-03_08-18-39.png"></image>
+        </line>
+        <line Align="Center">
+            <content style="Custom0 bold italic">Виділений запис</content>
+        </line>
+        <line Align="Center">
+            <image height="152.0" style="Custom0 bold italic" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="380.0" topMargin="0.0" imageId="image_2022-12-03_08-35-50.png"></image>
+        </line>
+        <line Align="Center">
+            <content style="Custom0 bold italic">Зовнішній вигляд діалогового вікна</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">Після натискання кнопки «Yes», запис видаляється з таблиці.</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+    </contents>
+</page>

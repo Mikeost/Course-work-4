@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page pageId="Page2" pageName="Тестування системи" title="">
+    <abstract></abstract>
+    <keywords></keywords>
+    <contents>
+        <line Align="Left">
+            <content style="Normal">Тестування системи додання даних</content>
+        </line>
+    </contents>
+</page>

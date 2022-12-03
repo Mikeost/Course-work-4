@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page pageId="Page12" pageName="Фільтрація даних" title="">
+    <abstract></abstract>
+    <keywords></keywords>
+    <contents>
+        <line Style="Heading1" Align="Center">
+            <content style="Heading1">Фільтрація даних в таблицях</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">Для кожної таблиці можна застосувати фільтр. Область роботи з фільтрами знаходиться знизу вікна.</content>
+        </line>
+        <line Align="Center">
+            <image height="448.674" style="Custom4" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="830.461" topMargin="0.0" imageId="image_2022-12-03_16-57-56.png"></image>
+        </line>
+        <line Align="Center">
+            <content style="Custom0 bold italic">Область роботи з фільтрами (виділено червоним)</content>
+        </line>
+        <line Align="Center">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">	•	Таблиця «Справа» - фільтр за типом справи;</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">	•	Таблиця «Слідчий» - фільтр за званням;</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">	•	Таблиця «Група свідків» - фільтр за кодом групи;</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">	•	Таблиця «Свідок» - фільтр за прізвищем;</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">	•	Таблиця «Група підозрюваних» - фільтр за кодом групи;</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">	•	Таблиця «Підозрюваний» - фільтр за прізвищем.</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+    </contents>
+</page>

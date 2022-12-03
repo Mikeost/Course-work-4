@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page pageId="Page15" pageName="Звіти за таблицями" title="">
+    <abstract></abstract>
+    <keywords></keywords>
+    <contents>
+        <line Style="Heading1" Align="Center">
+            <content style="Heading1">Звіти за таблицями</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">Програмний продук надає такі звіти за таблицями:</content>
+        </line>
+        <list ListStyle="listSquare">
+            <listItem style="Custom4">
+                <line Align="Left">
+                    <content style="Custom4">Звіт за таблицею «Справа»;</content>
+                </line>
+            </listItem>
+            <listItem style="Custom4">
+                <line Align="Left">
+                    <content style="Custom4">Звіт за таблицею «Слідчий»;</content>
+                </line>
+            </listItem>
+            <listItem style="Custom4">
+                <line Align="Left">
+                    <content style="Custom4">Звіт за таблицею «Група свідків»;</content>
+                </line>
+            </listItem>
+            <listItem style="Custom4">
+                <line Align="Left">
+                    <content style="Custom4">Звіт за таблицею «Свідок»;</content>
+                </line>
+            </listItem>
+            <listItem style="Custom4">
+                <line Align="Left">
+                    <content style="Custom4">Звіт за таблицею «Група підозрюваних»;</content>
+                </line>
+            </listItem>
+            <listItem style="Custom4">
+                <line Align="Left">
+                    <content style="Custom4">Звіт за таблицею «Підозрюваний».</content>
+                </line>
+            </listItem>
+        </list>
+        <line Align="Center">
+            <image height="163.114" style="Normal" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="585.035" topMargin="0.0" imageId="image_2022-12-03_23-45-11.png"></image>
+        </line>
+    </contents>
+</page>

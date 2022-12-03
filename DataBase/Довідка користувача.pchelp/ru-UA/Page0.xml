@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page pageId="Page0" pageName="Опис програмного продукту" title="">
+    <abstract></abstract>
+    <keywords></keywords>
+    <contents>
+        <line Style="Heading1" Align="Center">
+            <content style="Heading1">Опис програмного продукту</content>
+        </line>
+        <line Align="Center">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">Довідка користувача АІС МВВС Слідчого відділу.</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom1">Програмний продукт є системою управління базою даних. БД</content>
+            <content style="Custom1" linkTarget="helpcrafter://Page3">[1]</content>
+            <content style="Custom1"> містить декілька таблиць, даними яких можна вільно маніпулювати (додавати, редагувати та видаляти). АІС</content>
+            <content style="Custom1" linkTarget="helpcrafter://Page3">[2]</content>
+            <content style="Custom1"> дозволяє шукати, фільтрувати та сортувати записи. Також є можливість робити запити</content>
+            <content style="Custom1" linkTarget="helpcrafter://Page3">[3]</content>
+            <content style="Custom1"> і створювати звіти</content>
+            <content style="Custom1" linkTarget="helpcrafter://Page3">[4]</content>
+            <content style="Custom1">.</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom1">Зміст довідки користувача:</content>
+        </line>
+        <list ListStyle="listDisc">
+            <listItem style="Custom1">
+                <line Align="Left">
+                    <content style="Custom1" linkTarget="helpcrafter://Page6">Маніпулювання записами</content>
+                    <content style="Custom1">:</content>
+                </line>
+            </listItem>
+            <list ListStyle="listHyphen">
+                <listItem style="Custom1">
+                    <line Align="Left">
+                        <content style="Custom1" linkTarget="helpcrafter://Page7">Додавання запису</content>
+                        <content style="Custom1">;</content>
+                    </line>
+                </listItem>
+                <listItem style="Custom1">
+                    <line Align="Left">
+                        <content style="Custom1" linkTarget="helpcrafter://Page8">Редагування запису</content>
+                        <content style="Custom1">;</content>
+                    </line>
+                </listItem>
+                <listItem style="Custom1">
+                    <line Align="Left">
+                        <content style="Custom1" linkTarget="helpcrafter://Page9">Видалення запису</content>
+                        <content style="Custom1">;</content>
+                    </line>
+                </listItem>
+                <listItem style="Custom1">
+                    <line Align="Left">
+                        <content style="Custom1" linkTarget="helpcrafter://Page10">Оновлення бази даних</content>
+                        <content style="Custom1">.</content>
+                    </line>
+                </listItem>
+            </list>
+            <listItem style="Custom1">
+                <line Align="Left">
+                    <content style="Custom1" linkTarget="helpcrafter://Page11">Пошук в таблицях</content>
+                    <content style="Custom1">;</content>
+                </line>
+            </listItem>
+            <listItem style="Custom1">
+                <line Align="Left">
+                    <content style="Custom1" linkTarget="helpcrafter://Page12">Фільтрація даних</content>
+                    <content style="Custom1">;</content>
+                </line>
+            </listItem>
+            <listItem style="Custom1">
+                <line Align="Left">
+                    <content style="Custom1" linkTarget="helpcrafter://Page13">Запити</content>
+                    <content style="Custom1">;</content>
+                </line>
+            </listItem>
+            <listItem style="Custom1">
+                <line Align="Left">
+                    <content style="Custom1" linkTarget="helpcrafter://Page14">Звіти</content>
+                    <content style="Custom1">:</content>
+                </line>
+            </listItem>
+            <list ListStyle="listHyphen">
+                <listItem style="Custom1">
+                    <line Align="Left">
+                        <content style="Custom1" linkTarget="helpcrafter://Page15">Звіти за таблицями</content>
+                        <content style="Custom1">;</content>
+                    </line>
+                </listItem>
+                <listItem style="Custom1">
+                    <line Align="Left">
+                        <content style="Custom1" linkTarget="helpcrafter://Page16">Звіти за запитами</content>
+                        <content style="Custom1">.</content>
+                    </line>
+                </listItem>
+            </list>
+            <listItem style="Custom1">
+                <line Align="Left">
+                    <content style="Custom1" linkTarget="helpcrafter://Page3">Глосарій</content>
+                    <content style="Custom1">.</content>
+                </line>
+            </listItem>
+        </list>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom1">Розробив студент групи ІПЗ-19 Остащенко Михайло.</content>
+        </line>
+    </contents>
+</page>

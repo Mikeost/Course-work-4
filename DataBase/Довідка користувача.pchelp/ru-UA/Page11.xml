@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page pageId="Page11" pageName="Пошук в таблицях" title="">
+    <abstract></abstract>
+    <keywords></keywords>
+    <contents>
+        <line Style="Heading1" Align="Center">
+            <content style="Heading1">Пошук в таблицях</content>
+        </line>
+        <line Align="Left">
+            <image height="46.34" style="Custom4" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="46.34" topMargin="0.0" imageId="search.png"></image>
+            <content style="Custom4">Пошук в таблицях здійснюється по ключовому полю за допомогою кнопки «знайти» на панелі інструментів. </content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">Таким чином:</content>
+        </line>
+        <list ListStyle="listDisc">
+            <listItem style="Custom4">
+                <line Align="Left">
+                    <content style="Custom4">Таблиця «Справа» - пошук за номером справи;</content>
+                </line>
+            </listItem>
+            <listItem style="Custom4">
+                <line Align="Left">
+                    <content style="Custom4">Таблиця «Слідчий» - пошук за табельним номером слідчого;</content>
+                </line>
+            </listItem>
+            <listItem style="Custom4">
+                <line Align="Left">
+                    <content style="Custom4">Таблиця «Група свідків» - пошук за кодом групи свідків;</content>
+                </line>
+            </listItem>
+            <listItem style="Custom4">
+                <line Align="Left">
+                    <content style="Custom4">Таблиця «Свідок» - пошук за кодом свідка;</content>
+                </line>
+            </listItem>
+            <listItem style="Custom4">
+                <line Align="Left">
+                    <content style="Custom4">Таблиця «Група підозрюваних» - пошук за кодом групи підозрюваних;</content>
+                </line>
+            </listItem>
+            <listItem style="Custom4">
+                <line Align="Left">
+                    <content style="Custom4">Таблиця «Підозрюваний» - пошук за кодом підозрюваного.</content>
+                </line>
+            </listItem>
+        </list>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+    </contents>
+</page>

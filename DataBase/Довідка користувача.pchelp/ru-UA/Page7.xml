@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page pageId="Page7" pageName="Додавання запису" title="">
+    <abstract></abstract>
+    <keywords></keywords>
+    <contents>
+        <line Style="Heading1" Align="Center">
+            <content style="Heading1">Додавання запису</content>
+        </line>
+        <line Align="Left">
+            <image height="52.434" style="Normal" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="52.434" topMargin="0.0" imageId="addRecord.png"></image>
+            <content style="Normal">  </content>
+            <content style="Custom5">- Кнопка додавання запису (</content>
+            <content style="Custom">⌘</content>
+            <content style="Custom5">cmd + N).</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">Після натискання кнопки додавання запису на панелі інструментів, відкривається форма зі спецальними полями введення даних. Наприклад, поле вибору типу справи - є полем з випадаючим списком (в якому є встановлені за замовчуванням типи справ). На формі є і інші спеціальні поля, які дозволяють внести дані з мінімальною ймовірністю на припущення помилки.</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Center">
+            <image height="602.823" style="Custom5 italic" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="403.061" topMargin="0.0" imageId="image_2022-12-02_22-15-14.png"></image>
+        </line>
+        <line Align="Center">
+            <content style="Custom0 italic">Зовнішній вигляд форми</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+    </contents>
+</page>

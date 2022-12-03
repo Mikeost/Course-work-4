@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page pageId="Page16" pageName="Звіти за запитами" title="">
+    <abstract></abstract>
+    <keywords></keywords>
+    <contents>
+        <line Style="Heading1" Align="Center">
+            <content style="Heading1">Звіти за запитами</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">Програмний продук надає такі звіти за запитами:</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom4">	</content>
+            <content style="Custom2">▪</content>
+            <content style="Custom4">	Звіт на основі запиту, що містить інформацію про кількість томів кожного типу справи;</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom2">	▪</content>
+            <content style="Custom4">	Звіт на основі запиту, що містить інформацію про справи за заданим періодом;</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom2">	▪</content>
+            <content style="Custom4">	Звіт на основі запиту, що містить інформацію про свідків, які задіяні в заданій справі.</content>
+        </line>
+        <line Align="Left">
+            <content style="Custom2">	▪</content>
+            <content style="Custom4">	Звіт на основі запиту, що містить інформацію про підозрюваних, які задіяні в заданій справі.</content>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+        <line Align="Center">
+            <image height="125.0" style="Custom4" leftMargin="0.0" bottomMargin="0.0" rightMargin="0.0" width="746.0" topMargin="0.0" imageId="image_2022-12-03_23-48-52.png"></image>
+        </line>
+        <line Align="Left">
+            <content style="Normal"></content>
+        </line>
+    </contents>
+</page>
